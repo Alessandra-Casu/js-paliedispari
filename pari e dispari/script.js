@@ -29,9 +29,21 @@ function sumParDisp(str){
         return pari;
         
     }
+    else if (somma %2 == 0 && scelta == 'dipari')
+    {
+        const pari = `La somma è ${ somma}, quindi: PARI e hai perso`;
+        return pari;
+
+    }
     else if(somma %2 !== 0 && scelta == 'pari'){
         const dispari = `La somma è ${ somma}, quindi: DISPARI hai perso`;
         return dispari;
+    }
+    else(somma %2 !== 0 && scelta == 'dispari')
+    {
+        const dispari = `La somma è ${ somma}, quindi: DISPARI hai vinto`;
+        return dispari;
+
     }
     
 }
