@@ -6,11 +6,12 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
  */
-
+let scelta = prompt('Scommetti scrivendo pari o dispari: ');
 let numUser = parseInt(prompt('Inserisci un numero: '));
 let int;
 let numComp = numRandom();
-let sum = 0 ;
+let sum = sumParDisp();
+
 function numRandom (int)
 {
     let num = Math.floor(Math.random() *  (5), 1);
@@ -19,25 +20,24 @@ function numRandom (int)
 
 }
 
+function sumParDisp(str){
+    
+    let somma = (numUser + numComp);
+    
+    if (somma %2 == 0 && scelta == 'pari'){
+        const pari = `La somma è ${ somma}, quindi: PARI e hai vinto`;
+        return pari;
+        
+    }
+    else if(somma %2 !== 0 && scelta == 'pari'){
+        const dispari = `La somma è ${ somma}, quindi: DISPARI hai perso`;
+        return dispari;
+    }
+    
+}
+
 
 console.log(numUser);
-
-
-sum = (numUser + numComp);
 console.log(sum);
 
-/*
-
- let wordReverse = reverseWord(word);         
-        
-        function reverseWord(str){
-            let wordReverse = '';
-            let i = str.length - 1;
-                while (i >= 0) {
-                    wordReverse += str[i];
-                    i--;
-                }
-            return wordReverse;
-        }
- */
 
